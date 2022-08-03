@@ -40,6 +40,12 @@
  * @test
  */
 ```
+- Tests dependency : check `tests/QueueTest.php`
+```
+/**
+ * @depends .....
+ */
+```
 
 # Documentation
 
@@ -55,3 +61,4 @@
 - - `./vendor/bin/phpunit ./tests/ --filter=testReturnFullName` (Filter by method name)
 - - `./vendor/bin/phpunit ./tests/ --filter=testReturnFullName --color` (Colorful output)
 - - `./vendor/bin/phpunit` - Use after configuring `phpunit.xml`
+- - `./vendor/bin/phpunit --filter=QueueTest`
