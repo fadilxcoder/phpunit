@@ -34,21 +34,4 @@ class QueueTest extends TestCase
 
         return $queue;
     }
-
-    /**
-     * @depends testItemAddedToQueue
-     */
-    public function testItemRemovedFromQueue(Queue $queue)
-    {
-        $queue->push(self::TEXT2);
-        $item = $queue->pop();
-
-        $this->assertEquals(1, $queue->getCount());
-        $this->assertEquals(self::TEXT2, $item);
-    }
-
-    protected function tearDown(): void
-    {
-        #echo '¯\_(ツ)_/¯';
-    }
 }

@@ -47,6 +47,9 @@
  */
 ```
 
+- `protected function setUp()` and `protected function tearDown()` are called before/after **each method** is tested.
+- `public static function setUpBeforeClass()` and `public static function tearDownAfterClass()` are called before/after **a class** is tested.
+
 # Documentation
 
 - https://phpunit.readthedocs.io/en/9.5/assertions.html (Assertions)
@@ -54,11 +57,35 @@
 
 # Execute
 
-- Run test by : 
-- - `phpunit ./tests/ExampleTest.php` (By filename)
-- - `phpunit ./tests/` (By repo)
-- - `./vendor/bin/phpunit ./tests/ExampleTest.php`
-- - `./vendor/bin/phpunit ./tests/ --filter=testReturnFullName` (Filter by method name)
-- - `./vendor/bin/phpunit ./tests/ --filter=testReturnFullName --color` (Colorful output)
-- - `./vendor/bin/phpunit` - Use after configuring `phpunit.xml`
-- - `./vendor/bin/phpunit --filter=QueueTest`
+Run test by : 
+- `phpunit ./tests/ExampleTest.php` (By filename)
+- `phpunit ./tests/` (By repo)
+- `./vendor/bin/phpunit ./tests/ExampleTest.php`
+- `./vendor/bin/phpunit ./tests/ --filter=testReturnFullName` (Filter by method name)
+- `./vendor/bin/phpunit ./tests/ --filter=testReturnFullName --color` (Colorful output)
+- `./vendor/bin/phpunit` - Use after configuring `phpunit.xml`
+- `./vendor/bin/phpunit --filter=QueueTest` (Test dependency among methods)
+- `php bin/phpunit --filter=QueueRefactoTest` (No test dependency / Individual test each method)
+
+# CLI
+
+```bash
+
+$ php bin/phpunit
+
+--------------------------------------------------------------------
+
+PHPUnit 9.5.13 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.1.2
+Configuration: /var/www/html/phpunit/phpunit.xml
+
+................                                                  16 / 16 (100%)
+
+Time: 00:00.005, Memory: 6.00 MB
+
+OK (16 tests, 20 assertions)
+
+--------------------------------------------------------------------
+
+```
