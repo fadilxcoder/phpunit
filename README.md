@@ -49,11 +49,14 @@
 
 - `protected function setUp()` and `protected function tearDown()` are called before/after **each method** is tested.
 - `public static function setUpBeforeClass()` and `public static function tearDownAfterClass()` are called before/after **a class** is tested.
+- `$this->createMock` and `$this->getMockBuilder` in `UserTest.php`
 
 # Documentation
 
 - https://phpunit.readthedocs.io/en/9.5/assertions.html (Assertions)
 - https://phpunit.readthedocs.io/en/9.5/configuration.html (The XML Configuration File)
+- https://phpunit.readthedocs.io/en/9.5/test-doubles.html (Test Doubles / Mock)
+- https://github.com/sebastianbergmann/phpunit/blob/main/src/Framework/Assert.php (Mock `$this->equalTo` list of other similar available methods)
 
 # Execute
 
@@ -80,11 +83,11 @@ PHPUnit 9.5.13 by Sebastian Bergmann and contributors.
 Runtime:       PHP 8.1.2
 Configuration: /var/www/html/phpunit/phpunit.xml
 
-................                                                  16 / 16 (100%)
+...................                                               19 / 19 (100%)
 
-Time: 00:00.005, Memory: 6.00 MB
+Time: 00:00.009, Memory: 6.00 MB
 
-OK (16 tests, 20 assertions)
+OK (19 tests, 25 assertions)
 
 --------------------------------------------------------------------
 
