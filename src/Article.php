@@ -17,6 +17,11 @@ class Article
 
     private function getUniqueIdentifier()
     {
-        return rand() . '-' . uniqid();
+        return rand() . '-' . uniqid(); # 293911606-62fd2399e7f77
+    }
+
+    private function getUniqueIdentifierByUser(string $prefix)
+    {
+        return uniqid($prefix) . '-' . rand(); # john62fd258f27938-784030554
     }
 }

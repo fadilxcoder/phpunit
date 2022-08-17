@@ -48,4 +48,14 @@ class ArticleTest extends TestCase
 
         $this->assertIsString($result);
     }
+
+    public function testGetUniqueIdentifierByUser()
+    {
+        $reflector = new ReflectionClass(Article::class);
+        $method = $reflector->getMethod('getUniqueIdentifierByUser');
+        $method->setAccessible(true);
+        $result = $method->invokeArgs($this->article, ['john']);
+
+        $this->assertStringStartsWith('john', $result);
+    }
 }

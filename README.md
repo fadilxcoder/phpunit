@@ -90,11 +90,15 @@ PHPUnit 9.5.13 by Sebastian Bergmann and contributors.
 Runtime:       PHP 8.1.2
 Configuration: /var/www/html/phpunit/phpunit.xml
 
-..........................                                        26 / 26 (100%)
+.........
+ Mail dispatch using connector : EDM::aM7Kj 
+ FROM : fadil@xcoder.dvlpr 
+ MSG : Alpha Tango Foxtrot Sierra Lima 
+...................                                      28 / 28 (100%)
 
-Time: 00:00.021, Memory: 6.00 MB
+Time: 00:03.036, Memory: 6.00 MB
 
-OK (26 tests, 33 assertions)
+OK (28 tests, 35 assertions)
 --------------------------------------------------------------------
 
 ```
