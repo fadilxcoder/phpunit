@@ -98,7 +98,7 @@ Configuration: /var/www/html/phpunit/phpunit.xml
 
 Time: 00:03.036, Memory: 6.00 MB
 
-OK (28 tests, 35 assertions)
+OK (29 tests, 36 assertions)
 --------------------------------------------------------------------
 
 ```
