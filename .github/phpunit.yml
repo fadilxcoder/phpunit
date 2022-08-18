@@ -1,0 +1,22 @@
+name: PHPUnit
+on:
+  push:
+    branches:
+      - master
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: "8.1"
+
+      - name: PHP init 
+        uses: nanasess/setup-php@v3
+        with:
+          php-version: '8.1'
+      - run: php bin/phpunit
