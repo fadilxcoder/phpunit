@@ -78,6 +78,12 @@ Run test by :
 - `php bin/phpunit --filter=QueueRefactoTest` (No test dependency / Individual test each method)
 - `php bin/phpunit --filter=OrderTest` (Mockery usage)
 
+# Code coverage
+
+- URL : http://localhost/phpunit/_coverage/dashboard.html
+- CMD : `php bin/phpunit --coverage-html html` - Generate report to specific directory
+- CMD : `php bin/phpunit` - Generate report into **_coverage**
+
 # CLI
 
 ```bash
@@ -85,20 +91,22 @@ Run test by :
 $ php bin/phpunit
 
 --------------------------------------------------------------------
-PHPUnit 9.5.13 by Sebastian Bergmann and contributors.
+PHPUnit 9.5.21 #StandWithUkraine
 
-Runtime:       PHP 8.1.2
-Configuration: /var/www/html/phpunit/phpunit.xml
+Runtime:       PHP 7.4.9 with Xdebug 2.9.6
+Configuration: C:\wamp64\www\phpunit\phpunit.xml
 
 .........
- Mail dispatch using connector : EDM::aM7Kj 
- FROM : fadil@xcoder.dvlpr 
- MSG : Alpha Tango Foxtrot Sierra Lima 
-...................                                      28 / 28 (100%)
+ Mail dispatch using connector : EDM::aM7Kj
+ FROM : fadil@xcoder.dvlpr
+ MSG : Alpha Tango Foxtrot Sierra Lima
+.....................                                    30 / 30 (100%)
 
-Time: 00:03.036, Memory: 6.00 MB
+Time: 00:03.358, Memory: 16.00 MB
 
-OK (29 tests, 36 assertions)
+OK (30 tests, 37 assertions)
+
+Generating code coverage report in HTML format ... done [00:00.082]
 --------------------------------------------------------------------
 
 ```
