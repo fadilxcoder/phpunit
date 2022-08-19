@@ -110,3 +110,10 @@ Generating code coverage report in HTML format ... done [00:00.082]
 --------------------------------------------------------------------
 
 ```
+
+# Github Action test
+
+- https://github.com/nanasess/shivammathur-setup-php (Setup PHP in GitHub Actions)
+- https://github.com/shivammathur/setup-php (Setup PHP in GitHub Actions)
+- https://github.com/marketplace/actions/setup-php-action (Setup PHP Action)
+- https://github.com/nanasess/setup-php (nanasess/setup-php)

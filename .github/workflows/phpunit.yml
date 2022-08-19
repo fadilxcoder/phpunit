@@ -16,8 +16,12 @@ jobs:
           php_version: "8.1"
 
       - name: PHP init 
-        uses: nanasess/setup-php@v3
+        uses: shivammathur/setup-php@master
         with:
           php-version: '8.1'
+          extension-csv: xdebug
           coverage: xdebug
-      - run: php bin/phpunit
+      - name: php details
+        run: php -v
+      - name: phpunit exec
+        run: php bin/phpunit
