@@ -91,6 +91,10 @@ Run test by :
 $ php bin/phpunit
 
 --------------------------------------------------------------------
+
+
+SCORE : 1:0    ¯\_(ツ)_/¯\ *|  /¯\_(°_o)_/¯
+
 PHPUnit 9.5.21 #StandWithUkraine
 
 Runtime:       PHP 7.4.9 with Xdebug 2.9.6
@@ -102,18 +106,55 @@ Configuration: C:\wamp64\www\phpunit\phpunit.xml
  MSG : Alpha Tango Foxtrot Sierra Lima
 .....................                                    30 / 30 (100%)
 
-Time: 00:03.358, Memory: 16.00 MB
+Time: 00:03.694, Memory: 16.00 MB
 
 OK (30 tests, 37 assertions)
 
-Generating code coverage report in HTML format ... done [00:00.082]
+Generating code coverage report in HTML format ... done [00:00.106]
+
+
+Code Coverage Report Summary:
+  Classes: 83.33% (5/6)      
+  Methods: 92.86% (13/14)    
+  Lines:   89.66% (26/29)    
+
+
 --------------------------------------------------------------------
 
 ```
 
-# Github Action test
+# Github Action test / code coverage
 
-- https://github.com/nanasess/shivammathur-setup-php (Setup PHP in GitHub Actions)
-- https://github.com/shivammathur/setup-php (Setup PHP in GitHub Actions - Main)
+- https://github.com/shivammathur/setup-php (Setup PHP in GitHub Actions)
 - https://github.com/marketplace/actions/setup-php-action (Setup PHP Action)
-- https://github.com/nanasess/setup-php (nanasess/setup-php)
+
+```yml
+name: PHPUnit
+on:
+  push:
+    branches:
+      - master
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: "8.1"
+
+      - name: PHP init 
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: '8.1'
+          extensions: xdebug
+          coverage: xdebug
+      - name: php details
+        run: php -v
+      - name: phpunit exec
+        run: php bin/phpunit
+
+```
